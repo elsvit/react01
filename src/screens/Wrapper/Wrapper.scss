@@ -1,0 +1,26 @@
+@import '../../constants/styles.scss';
+
+.wrapper__container {
+  width: 100%;
+  background-color: beige;
+  paddig: 0;
+  margin: 0;
+}
+
+.wrapper__header {
+  background-color: aqua;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: $header-height;
+  display: flex;
+  width: 100%;
+}
+
+.wrapper__children {
+  background-color: burlywood;
+  margin-top: $header-height;
+  display: flex;
+  overflow: auto;
+}
