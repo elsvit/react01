@@ -1,0 +1,97 @@
+@import '../../constants/styles';
+
+.filterHeader{
+  width: 100%;
+  height: $filter-height;
+  border-bottom: 2px solid forestgreen;
+
+  .filterHeader__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .filterHeader__title {
+      flex: 1;
+      color: forestgreen;
+      font-size: $font-normal;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .filterHeader__emptyend {
+      flex: 10;
+    }
+
+    .filterHeader__menuField {
+      flex: 2;
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      height: $filter-height;
+      color: burlywood;
+      margin-left: 10px;
+      margin-right: 10px;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        color: chocolate;
+        .menuField__dropdown--wrapper {
+          .menuField__dropdown {
+            border-bottom: 1px solid chocolate;;
+            border-right: 1px solid chocolate;
+          }
+        }
+      }
+
+      .menuField__text {
+        font-size: $font-normal;
+        font-weight: 500;
+      }
+
+      .menuField__dropdown--wrapper {
+        margin-bottom: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        .menuField__dropdown {
+          width: 7px;
+          height: 7px;
+          border-bottom: 1px solid burlywood;;
+          border-right: 1px solid burlywood;
+          transform: rotate(45deg);
+        }
+      }
+
+      .menuField__options {
+        position: absolute;
+        top: $filter-height;
+        left: 0;
+        min-width: 100%;
+        min-height: 50px;
+        max-height: 200px;
+        background-color: white;
+        border: 2px solid forestgreen;
+        overflow-scrolling: auto;
+
+        .options__option {
+          display: flex;
+          flex-direction: row;
+          padding: 5px;
+
+          .option__value {
+            flex: 1;
+          }
+
+          .option__name {
+            flex: 10;
+            font-size: 15px;
+            color: burlywood;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+

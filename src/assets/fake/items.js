@@ -2,101 +2,115 @@ export const ITEMS = {
   "items": [
     {
       "item_id": 1,
-      "product_id": 1,
+      "product": "Circle",
       "category": "figures",
       "color": "red",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 10,
     },
     {
       "item_id": 2,
-      "product_id": 1,
+      "product": "Circle",
       "category": "figures",
       "color": "green",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 12,
     },
     {
       "item_id": 3,
-      "product_id": 1,
+      "product": "Circle",
       "category": "figures",
       "color": "blue",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 16,
     },
     {
       "item_id": 4,
-      "product_id": 1,
+      "product": "Circle",
       "category": "figures",
       "color": "lightblue",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 8,
     },
     {
       "item_id": 5,
-      "product_id": 2,
+      "product": "Square",
       "category": "figures",
       "color": "red",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 20,
     },
     {
       "item_id": 6,
-      "product_id": 2,
+      "product": "Square",
       "category": "figures",
       "color": "green",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 21,
     },
     {
       "item_id": 7,
-      "product_id": 2,
+      "product": "Square",
       "category": "figures",
       "color": "lightgreen",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 22,
     },
     {
       "item_id": 8,
-      "product_id": 2,
+      "product": "Square",
       "category": "figures",
       "color": "blue",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 23,
     },
     {
       "item_id": 9,
-      "product_id": 3,
+      "product": "A",
       "category": "symbols",
       "color": "blue",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 100,
     },
     {
       "item_id": 10,
-      "product_id": 3,
+      "product": "A",
       "category": "symbols",
       "color": "lightblue",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 102,
     },
     {
       "item_id": 11,
-      "product_id": 3,
+      "product": "A",
       "category": "symbols",
       "color": "red",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 108,
     },
     {
       "item_id": 12,
-      "product_id": 3,
+      "product": "A",
       "category": "symbols",
       "color": "green",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 109,
     },
     {
       "item_id": 13,
-      "product_id": 4,
+      "product": "B",
       "category": "symbols",
       "color": "lightgreen",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 101,
     },
     {
       "item_id": 14,
-      "product_id": 4,
+      "product": "B",
       "category": "symbols",
       "color": "blue",
-      "img_url": "img_url"
+      "img_url": "img_url",
+      "price" : 106,
     },
   ]
 };

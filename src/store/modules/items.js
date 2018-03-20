@@ -11,10 +11,11 @@ const { ITEMS } = require('../../assets/fake/items');
 
 export type Item = {
   item_id: number,
-  product_id: number,
+  product: string,
   category: string,
   color: string,
   img_url: string,
+  price: number,
 }
 
 type GetItemsAction = {|
