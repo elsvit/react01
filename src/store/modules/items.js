@@ -9,7 +9,7 @@ const GET_ITEMS_FAILED: 'items/GET_ITEMS_FAILED' =
 
 const { ITEMS } = require('../../assets/fake/items');
 
-export type Item = {
+export type ItemT = {
   item_id: number,
   product: string,
   category: string,
@@ -46,7 +46,7 @@ type itemsActions =
   | GetitemsFailedAction;
 
 type itemState = {
-  data: Array<Item>,
+  data: Array<ItemT>,
   loading: boolean,
   error: ?string,
 };

@@ -6,6 +6,7 @@ import _ from 'lodash';
 
 import './PLP.scss';
 import Filter from '../../components/Filter/Filter';
+import Item from '../../components/Item/Item';
 
 class PLP extends PureComponent {
   constructor(props) {
@@ -22,7 +23,6 @@ class PLP extends PureComponent {
   getFields = (data, field) => {
     const fields = _.uniq(_.map(data, field));
     const res = fields.map(option => ({option, checked: true}));
-    console.log('Filters26 fields', fields, 'res', res);
     return res;
   }
 
@@ -41,7 +41,6 @@ class PLP extends PureComponent {
     })
   }
 
-
   render() {
     return (
       <div className="PLP__container">
@@ -51,68 +50,30 @@ class PLP extends PureComponent {
           onChange={this.onChangeFilter}
           onClickField={this.onClickField}
         />
-        <div className="PLP__elem">
+        <div className="PLP__list">
+          {this.props.items ? (
+            this.props.items.map((item, ind) => {
+              let check = true;
+              const arrKeys = Object.keys(this.state.filter);
+              for (let i = 0; i < arrKeys.length; i += 1) {
+                const filterProp = _.find(this.state.filter[arrKeys[i]], {option: item[arrKeys[i]]});
+                if (!filterProp.checked) {
+                  check = false;
+                  break;
+                }
+              }
 
+              if (check) {
+                return (
+                  <Item
+                    key={item.item_id}
+                    item={item}
+                  />
+                );
+              }
+            })
+          ) : null}
         </div>
-
-        <div>PLP1</div>
-        <div>PLP2</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP</div>
-        <div>PLP99</div>
-
       </div>
     );
   }

@@ -1,16 +1,16 @@
 @import '../../constants/styles';
 
-.filterHeader{
+.filter{
   width: 100%;
   height: $filter-height;
   border-bottom: 2px solid forestgreen;
 
-  .filterHeader__wrapper{
+  .filter__wrapper{
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    .filterHeader__title {
+    .filter__title {
       flex: 1;
       color: forestgreen;
       font-size: $font-normal;
@@ -18,11 +18,11 @@
       margin-right: 5px;
     }
 
-    .filterHeader__emptyend {
+    .filter__emptyend {
       flex: 10;
     }
 
-    .filterHeader__menuField {
+    .filter__menuField {
       flex: 2;
       display: flex;
       position: relative;

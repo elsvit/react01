@@ -1,11 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React from 'react';
 
 import './Filter.css';
-
-// import type {} from '../../../store/index';
-
 
 type FieldT = {
   [key: string]: boolean,
@@ -18,11 +13,11 @@ type PropsT = {
   onClickField: () => {},
 }
 
-export default function FilterHeader(props: PropsT) {
+export default function Filter(props: PropsT) {
   return (
-    <div className="filterHeader">
-      <div className="filterHeader__wrapper">
-        <div className="filterHeader__title">
+    <div className="filter">
+      <div className="filter__wrapper">
+        <div className="filter__title">
           Filter:
         </div>
         {
@@ -31,7 +26,7 @@ export default function FilterHeader(props: PropsT) {
               const arr = props.fields[field];
               return (
                 <div
-                  className="filterHeader__menuField"
+                  className="filter__menuField"
                   key={field}
                 >
                   <div
@@ -86,7 +81,7 @@ export default function FilterHeader(props: PropsT) {
             })
           ) : null
         }
-        <div className="filterHeader__emptyend"></div>
+        <div className="filter__emptyend"></div>
       </div>
     </div>
   );
